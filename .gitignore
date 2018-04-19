@@ -1,0 +1,6 @@
+.ds_store
+log/*
+tmp/cluster.pid
+tmp/index.pid
+node_modules
+package-lock.json
