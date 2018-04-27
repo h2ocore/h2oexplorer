@@ -1,16 +1,11 @@
-Iquidus Explorer - 1.6.1
+Iquidus Explorer - 1.8
 ================
 
 An open source block explorer written in node.js.
 
 ### See it in action
 
-*  [Jumbucks](http://explorer.getjumbucks.com)
-*  [Sphere](http://sphere.iquidus.io)
-*  [SAR](http://explorer.sarcoin.info)
-*  [Vanillacoin](https://blockchain.vanillacoin.net/)
-*  [Neoscoin](http://explorer.infernopool.com/)  
-*  [C2Chain](http://c2chain.info/)
+*  [Xuez](http://xuez.donkeypool.com)
 
 *note: If you would like your instance mentioned here contact me*
 
@@ -137,8 +132,9 @@ Where [SIZE] is an integer higher than the default.
 
 ### License
 
-Copyright (c) 2015, Iquidus Technology  
-Copyright (c) 2015, Luke Williams  
+Copyright (c) 2015, Iquidus Technology
+Copyright (c) 2015, Luke Williams
+Copyright (c) 2018, ddude & davembg
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
