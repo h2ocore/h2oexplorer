@@ -98,6 +98,14 @@ sync.js (located in scripts/) is used for updating the local databases. This scr
 Iquidus Explorer is intended to be generic so it can be used with any wallet following the usual standards. The wallet must be running with atleast the following flags
 
     -daemon -txindex
+    
+### Masternodes
+
+Your wallet should have changes applied to output the IP address for the "masternode list" RPC command.
+Use this commit as a template for adding this feature to your wallet.
+Pay close attention to the comment for the commit.
+
+https://github.com/XUEZ/xuez/commit/7091e49e6a39825a705f42991fc1ba7ea3a0e0f3
 
 ### Donate
 
