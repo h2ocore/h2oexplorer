@@ -103,9 +103,8 @@ Iquidus Explorer is intended to be generic so it can be used with any wallet fol
 
 Your wallet should have changes applied to output the IP address for the "masternode list" RPC command.
 Use this commit as a template for adding this feature to your wallet.
-Pay close attention to the comment for the commit.
 
-https://github.com/XUEZ/xuez/commit/7091e49e6a39825a705f42991fc1ba7ea3a0e0f3
+https://github.com/XUEZ/xuez/commit/db7e8f2ecf1a0c2bbd9e8cd06ea31a2975b52f03
 
 ### Donate
 
