@@ -43,8 +43,8 @@ html
             $("#lblConnections").text(json.data[0].connections + ' connections');
             $("#lblBlockcountValue").text(json.data[0].blockcount);
 
-            //$("#lblConnectionsNav").text(json.data[0].connections);
-            //$("#lblBlockcountValueNav").text(json.data[0].blockcount);
+            $("#lblConnectionsNav").text(json.data[0].connections);
+            $("#lblBlockcountValueNav").text(json.data[0].blockcount);
 
 
             if (json.data[0].cmc) {
@@ -160,10 +160,28 @@ html
                   span.glyphicon.glyphicon-info-sign
                   span.menu-text #{settings.locale.menu_api}
           ul.nav.nav-bar.navbar-right
-            img(src='#{settings.logo}', style='margin:4px 170px 0 0;height:40px')
+            img(src='#{settings.logo}')
 
     .col-md-12
       .row
+        .col-lg-2.col-md-0
+
+        .col-lg-2.col-md-3.col-sm-4
+          .panel.panel-primary
+            .panel-heading
+              span General
+            .panel-body(style="padding:25px 0")
+              row.text-center
+                .col-sm-6.col-xs-12(class="text-right")
+                  span Blocks:
+                .col-sm-6.col-xs-12(class="text-left")
+                  span#lblBlockcountValueNav.text-primary(style="font-size:18px")
+              row.text-center
+                .col-sm-6.col-xs-12(class="text-right")
+                  span Connections:
+                .col-sm-6.col-xs-12(class="text-left")
+                  span#lblConnectionsNav
+
         if settings.display.masternodes == false
           .col-lg-1.col-md-2
         if settings.display.coinmarketcap == true
@@ -196,8 +214,6 @@ html
                       ="$"
                       span#cmc_volume_24h -
                       =" USD"
-        else
-          .col-lg-3.col-md-0
 
         if settings.index.show_coin_supply
           - supplyPanelSize = settings.display.coinmarketcap == true ? "col-lg-2 col-md-3 col-sm-4" : "col-lg-2 col-md-3 col-sm-4"
