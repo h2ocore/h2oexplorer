@@ -43,8 +43,8 @@ html
             $("#lblConnections").text(json.data[0].connections + ' connections');
             $("#lblBlockcountValue").text(json.data[0].blockcount);
 
-            $("#lblConnectionsNav").text(json.data[0].connections);
-            $("#lblBlockcountValueNav").text(json.data[0].blockcount);
+            //$("#lblConnectionsNav").text(json.data[0].connections);
+            //$("#lblBlockcountValueNav").text(json.data[0].blockcount);
 
 
             if (json.data[0].cmc) {
@@ -112,7 +112,7 @@ html
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand(href='http://www.xuezcoin.com') #{settings.title}
+          a.navbar-brand(href='https://xuezcoin.com') #{settings.title}
         .collapse.navbar-collapse(id='navbar-collapse')
           ul.nav.navbar-nav
             li#home
@@ -160,25 +160,10 @@ html
                   span.glyphicon.glyphicon-info-sign
                   span.menu-text #{settings.locale.menu_api}
           ul.nav.nav-bar.navbar-right
-            img(src='#{settings.logo}')
+            img(src='#{settings.logo}', style='margin:4px 170px 0 0;height:40px')
 
     .col-md-12
       .row
-        .col-lg-2.col-md-4
-          .panel.panel-primary
-            .panel-heading
-              span General
-            .panel-body
-              row.text-center
-                .col-sm-6.col-xs-12(class="text-right")
-                  span Blocks: 
-                .col-sm-6.col-xs-12(class="text-left")
-                  span#lblBlockcountValueNav.text-primary(style="font-size:18px;")
-              row.text-center
-                .col-sm-6.col-xs-12(class="text-right")
-                  span Connections: 
-                .col-sm-6.col-xs-12(class="text-left")
-                  span#lblConnectionsNav
         if settings.display.masternodes == false
           .col-lg-1.col-md-2
         if settings.display.coinmarketcap == true
@@ -215,7 +200,7 @@ html
           .col-lg-3.col-md-0
 
         if settings.index.show_coin_supply
-          - supplyPanelSize = settings.display.coinmarketcap == true ? "col-lg-2 col-md-4 col-sm-4" : "col-lg-3 col-md-4 col-sm-4"
+          - supplyPanelSize = settings.display.coinmarketcap == true ? "col-lg-2 col-md-3 col-sm-4" : "col-lg-2 col-md-3 col-sm-4"
           div(class=supplyPanelSize)
             .panel.panel-primary.panel-summary
               .panel-heading
@@ -260,7 +245,7 @@ html
                       else
                         label#difficulty -
         if settings.display.masternodes == true
-          .col-lg-2.col-md-4.col-sm-4
+          .col-lg-2.col-md-3.col-sm-4
             .panel.panel-primary.panel-summary
               .panel-heading
                 span #{settings.locale.masternodes}

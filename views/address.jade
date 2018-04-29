@@ -3,9 +3,8 @@ extends layout
 block content
   - var sent = address.sent /100000000
   - var received = address.received / 100000000
-    img.qrcode.pull-right.hidden-xs(src='/qr/#{address.a_id}')
   .col-xs-12.col-md-10.col-md-offset-1
-    .panel.panel-default.panel-address-summary
+    .panel.panel-default.panel-address-summary(style='width:89%')
       .panel-heading(style='position:relative;')        
         strong.mono #{address.a_id}
         if settings.labels[address.a_id]
@@ -38,6 +37,7 @@ block content
               if settings.show_sent_received == true
                 td #{received.toFixed(8)}
               td #{balance}
+    img.qrcode.hidden-xs(src='/qr/#{address.a_id}')      
     .panel.panel-default.hidden-xs
       .panel-heading
         strong #{settings.locale.ex_latest_transactions}
