@@ -112,7 +112,8 @@ html
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand(href='https://xuezcoin.com') #{settings.title}
+          a(href='https://xuezcoin.com').img(src='#{settings.logo}')
+            
         .collapse.navbar-collapse(id='navbar-collapse')
           ul.nav.navbar-nav
             li#home
@@ -159,8 +160,6 @@ html
                 a.navbar-link(href='/info')
                   span.glyphicon.glyphicon-info-sign
                   span.menu-text #{settings.locale.menu_api}
-          ul.nav.nav-bar.navbar-right
-            img(src='#{settings.logo}')
 
     .col-md-12
       .row
