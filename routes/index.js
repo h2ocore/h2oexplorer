@@ -117,22 +117,24 @@ function route_get_address(res, hash, count) {
         });
       }, function(){
 
-        // hack to support numbers longer than 15 digits.
-        var balance = new BigInteger(address.balance);
-        var viewBalance = balance.divide(100000000);
-        if (balance !=0 ) {
-        var balanceRemain = new BigNumber(balance.toString().substr(
-          viewBalance.toString().length));
-        } else { var balanceRemain = 0 ; }
+        var viewBalance = 0;
+        if( address.balance ){
+          // hack to support numbers longer than 15 digits.
+          var balance = new BigInteger( address.balance );
+          var viewBalance = balance.divide( 100000000 );
+          var balanceRemain = 0;
+          if ( balance != 0 ) {
+            balanceRemain = new BigNumber( balance.toString().substr( viewBalance.toString().length ) );
+          }
+        }
 
         res.render('address', {
           active: 'address',
           address: address,
-          balance: viewBalance.toString()+'.'+balanceRemain.toString(),
+          balance: ( viewBalance != 0 ) ? viewBalance.toString()+'.'+balanceRemain.toString() : 0,
           txs: txs
         });
       });
-
     } else {
       route_get_index(res, hash + ' not found');
     }
