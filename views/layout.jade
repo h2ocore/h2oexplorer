@@ -162,10 +162,8 @@ html
                   span.glyphicon.glyphicon-info-sign
                   span.menu-text #{settings.locale.menu_api}
 
-    .col-md-12
+    .col-md-12(style="padding-left:9%")
       .row
-        .col-lg-2.col-md-0
-
         .col-lg-2.col-md-3.col-sm-4
           .panel.panel-primary
             .panel-heading
@@ -225,6 +223,12 @@ html
                 row.text-center
                   .col-md-12
                     h1#supply -
+        
+        .col-lg-3.col-md-3.col-sm-4
+          div(style="font-size:10px;color:#C9C6BD;text-align:center;padding:8px 0 0 0;margin:0;border:1px solid #ddd")
+            iframe(src="https://coinlib.io/widget?type=single&theme=light&coin_id=1021188&pref_coin_id=1505" scrolling="none" marginwidth="0" marginheight="0" frameborder="0" border="0" style="width:95%;border:0;margin:0;padding:0;")
+              a(href="https://coinlib.io" target="_blank" style="font-size:10px; color:#C9C6BD; text-decoration:none;") powered by CoinLib
+
         if settings.index.show_hashrate
           .col-lg-2.col-md-3.col-sm-4
             .panel.panel-primary.panel-summary
